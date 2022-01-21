@@ -1,3 +1,12 @@
+import './styles/global.scss'
+import { Header } from "./components/header";
+import { OverviewPanel } from './components/OverviewPanel';
+
 export function App() {
-  return <h1>Hello Lara!</h1>;
+  return (
+      <>
+        <Header />
+        <OverviewPanel />
+      </>);
+    
 }

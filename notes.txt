@@ -13,4 +13,4 @@ babel-loader //É a integração do babel com o webpack pra fazer o bundle dos a
 WEBPACK: É usado para fazer a conversão de arquivos do projeto para formatos de arquivos que 
 sejam entendíveis pelo browser. Exemplo: 
 Se vc for usar .sass, .hbs, .cjs no projeto esses arquivos não serão entendidos pelo browser,
-então vc precisará usar o Webpack para fazer essa conversão. 
+então vc precisará usar o Webpack para fazer essa conversão.
