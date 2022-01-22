@@ -1,4 +1,4 @@
-/* PAYMENTS BOX ===================================*/
+/*PAYMENTS BOX ===================================*/
 #payments {
   grid-row-start: 2;
   grid-row-end: 2;
@@ -48,46 +48,4 @@
   font-size: 0.8rem;
   font-weight: 100;
   color: #555; 
-}
-
-#creditcards {
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1;
-  grid-gap: 20px;
-  margin-top: 20px;
-  
-}
-
-.header-cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 10px;
-}
-
-.description-card {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  padding: 0 10px;
-  border-bottom: #ebebeb dotted 1px;
-}
-
-.desc-card-left {
-  display: flex;
-}
-
-.desc-card-left p {
-  
-  margin-right: 10px;
-}
-
-.negrito {
-  font-weight: 400;
-  font-size: 0.8;
 }
