@@ -1,7 +1,7 @@
 import './styles/global.scss'
 import './styles/header.scss'
 import './styles/overviewPanel.scss'
-import './styles/greyBoxes.scss'
+import './styles/payBoxes.scss'
 import { Header } from "./components/Header/header";
 import { OverviewPanel } from './components/OverviewPanel/OverviewPanel';
 import { Paid } from './components/Bills/Paid';
