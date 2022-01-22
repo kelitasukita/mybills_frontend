@@ -10,6 +10,7 @@ import { Paid } from './components/Bills/Paid';
 import { ToPay } from './components/Bills/ToPay';
 import { Amex } from './components/CreditCards/Amex';
 import { Footer } from './components/Footer'
+import { Visa } from './components/CreditCards/Visa'
 
 export function App() {
   return (
@@ -23,6 +24,7 @@ export function App() {
           </div>
           <div id="creditcards">
             <Amex />
+            <Visa />
           </div>
         </main>
         <Footer />
