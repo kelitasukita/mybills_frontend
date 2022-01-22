@@ -1,0 +1,32 @@
+/* MAIN ========================================= */
+.container {
+  width: calc(min(90vw, 800px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+}
+
+/* BALANCE BOX ====================================*/
+#balance {
+  display: flex;
+  justify-content: space-between;
+  background: #57d3ff;
+  border-radius: 4px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 20px 0;
+  padding: 4rem;
+  align-items: center;
+  color: #ebebeb;
+}
+.balance-box h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.balance-box p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-left: 20px;
+}

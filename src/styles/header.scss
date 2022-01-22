@@ -1,0 +1,29 @@
+/* HEADER ========================================= */
+header {
+  background: #1bd273;
+  padding: 0.6rem ; /* ver aula no discover sobre essas medidas */
+  text-align:left;
+  color: #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+#logo {
+  color: #ebebeb;
+  font-weight: 700;
+  justify-content: left;
+
+}
+
+.menu {
+  display: flex;
+
+}
+
+.menu li {
+  margin-left: 20px;
+  padding: 10px;
+ 
+}
