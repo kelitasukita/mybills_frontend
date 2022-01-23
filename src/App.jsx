@@ -22,9 +22,11 @@ export function App() {
             <Paid />
             <ToPay />
           </div>
-          <div id="creditcards">
+          <div class="creditcards">
             <Amex />
             <Visa />
+            <Visa />
+            <Amex />
           </div>
         </main>
         <Footer />
