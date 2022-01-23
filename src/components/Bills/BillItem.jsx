@@ -1,19 +1,32 @@
+import { useState } from "react";
+
 export function BillItem(props) {
+
+  const [ status, setStatus ] = useState(props.status);
+
+  function changeStatus() {
+    if (status == 'minus'){
+      setStatus('check');
+    } else {
+      setStatus('minus');
+    }
+  }
+
   return (
-    <div class="bill">
-      <div class="description">
-        <div class="description-left">
-          <div class="icon-bill">
-            <i class="fas fa-circle fa-xs"></i>
+    <div className="bill">
+      <div className="description">
+        <div className="description-left">
+          <div className="icon-bill">
+            <i className="fas fa-circle fa-xs"></i>
           </div>
           <div>
             <p>{props.dados.title}</p>
             <small>{props.dados.date}</small>
           </div>
         </div>
-        <div class="value-bill-icon">
+        <div className="value-bill-icon">
           <p>{props.dados.price}</p>
-          <i class={`fas fa-${props.classe}-circle`}></i>
+          <i className={`fas fa-${status}-circle`} onClick={changeStatus}></i>
         </div>
       </div>
     </div>

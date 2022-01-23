@@ -9,14 +9,14 @@ export function Paid() {
 
 
   return (
-      <section class="pay-card-boxes">
-        <div  class="title">
+      <section className="pay-card-boxes">
+        <div  className="title">
           <h3>Bills Paid</h3>
         </div>
-        <div class="container-bills">
+        <div className="container-bills">
           {
-            dados.map(conta => {
-              return <BillItem dados={conta} classe="check" />
+            dados.map((conta, indice) => {
+              return <BillItem key={indice} dados={conta} status="check" />
             })
           }
         </div>

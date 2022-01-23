@@ -9,15 +9,15 @@ export function ToPay() {
 
   return (
 
-    <section class="pay-card-boxes">
-      <div  class="title">
+    <section className="pay-card-boxes">
+      <div  className="title">
         <h3>Bills to Pay</h3>
       </div>
-      <div class="unpaid">
+      <div className="unpaid">
         
         {
-          dados.map(item => {
-            return <BillItem dados={item} classe="minus" />
+          dados.map((item, indice) => {
+            return <BillItem key={indice} dados={item} status="minus" />
           })
         }
 
