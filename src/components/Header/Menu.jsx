@@ -3,7 +3,7 @@ import { MenuItem } from "./MenuItem";
 export function Menu() {
   return (
     <nav>
-      <ul class="menu">
+      <ul className="menu">
 
         <MenuItem title="Overview" link="/overview" />
         <MenuItem title="Dashboard" link="/dashboard" />

@@ -16,13 +16,13 @@ export function App() {
   return (
       <>
         <Header />
-        <main class="container">
+        <main className="container">
           <OverviewPanel />
           <div id="payments">
             <Paid />
             <ToPay />
           </div>
-          <div class="creditcards">
+          <div className="creditcards">
             <Amex />
             <Visa />
             <Visa />
