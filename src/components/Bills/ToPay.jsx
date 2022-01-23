@@ -13,7 +13,7 @@ export function ToPay() {
       <div  className="title">
         <h3>Bills to Pay</h3>
       </div>
-      <div className="unpaid">
+      <div className="container-bills">
         
         {
           dados.map((item, indice) => {

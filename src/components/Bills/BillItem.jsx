@@ -1,21 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function BillItem(props) {
 
   const [ status, setStatus ] = useState(props.status);
+  const [ classe, setClasse ] = useState('minus');
+
+  useEffect(() => {
+    if (status == 'minus') {
+      setClasse('unpaid');
+    } else {
+      setClasse('paid');
+    }
+  });
 
   function changeStatus() {
     if (status == 'minus'){
       setStatus('check');
+      setClasse('paid');
     } else {
       setStatus('minus');
+      setClasse('unpaid');
     }
   }
 
   return (
     <div className="bill">
       <div className="description">
-        <div className="description-left">
+        <div className={`description-left ${classe}`}>
           <div className="icon-bill">
             <i className="fas fa-circle fa-xs"></i>
           </div>
