@@ -5,6 +5,20 @@ export function Paid() {
   const dados = [
     {title: 'Vodafone', date: '2022-01-10', price: '€ 105,00'},
     {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    {title: 'Vitens', date: '2022-01-10', price: '€ 35,00'},
+    
   ];
 
 

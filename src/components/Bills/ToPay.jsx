@@ -5,6 +5,19 @@ export function ToPay() {
   const dados = [
     {title: 'Carro', date: '2022-01-10', price: 1800.00},
     {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
+    {title: 'Cartão', date: '2022-01-10', price: 3500.00},
   ];
 
   return (
