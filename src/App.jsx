@@ -23,13 +23,12 @@ export function App() {
   return (
       <>
         <Header />
+
         <main className="container">
           <OverviewPanel />
-          <div id="payments">
+          <div className="payments">
             <Paid />
             <ToPay />
-          </div>
-          <div className="creditcards">
             {
               cards.map((card, index) => {
                 return <CardBox key={index} data={card}/>
@@ -37,6 +36,7 @@ export function App() {
             }
           </div>
         </main>
+        
         <Footer />
         
       </>);

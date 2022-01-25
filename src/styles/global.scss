@@ -11,12 +11,8 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-li {
-  list-style: none;
-}
-h3 {
-  color: #555;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 10px;
+/* MAIN ========================================= */
+.container {
+  width: calc(min(90vw, 800px));
+  margin: 0 auto;
 }

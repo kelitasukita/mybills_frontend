@@ -1,23 +1,34 @@
 /*PAYMENTS BOX ===================================*/
-#payments {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 20px; 
-}
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 
-.icon-bill {
-  padding: 10px;
-  align-items: center;
-  color: #1bd273;
-}
+  section {
+    flex: 1 1 390px;
 
-.unpaid  .icon-bill  {
-    color: red;
+    h3 {
+      color: #555;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 10px;
+    }
+
+    .icon-bill {
+      padding: 10px;
+      align-items: center;
+      color: #1bd273;
+    }
+    
+    .unpaid  .icon-bill  {
+      color: red;
+    }
+
+    .container-bills, .container-creditcard {
+      height: 185px;
+      overflow-y: auto;
+    }
+  }
 }
 
 .description {
@@ -50,7 +61,3 @@
   color: #555; 
 }
 
-.container-bills {
-  height: 185px;
-  overflow-y: auto;
-}

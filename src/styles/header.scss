@@ -4,31 +4,29 @@ header {
   padding: 0.6rem ; /* ver aula no discover sobre essas medidas */
   text-align:left;
   color: #ebebeb;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   
-}
-
-#logo {
-  color: #ebebeb;
-  font-weight: 700;
-  justify-content: left;
-
-}
-
-.menu {
-  display: flex;
-
-  a {
-    text-decoration: none;
+  #logo {
     color: #ebebeb;
+    font-weight: 700;
+    justify-content: left;
   }
-
-}
-
-.menu li {
-  margin-left: 20px;
-  padding: 10px;
- 
+  
+  .menu {
+    display: flex;
+    
+    li {
+      list-style: none;
+      margin-left: 20px;
+      padding: 10px;
+  
+      a {
+        text-decoration: none;
+        color: #ebebeb;
+      }
+    }
+  }
 }
