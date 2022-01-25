@@ -8,11 +8,18 @@ import { Header } from "./components/Header/header";
 import { OverviewPanel } from './components/OverviewPanel/OverviewPanel';
 import { Paid } from './components/Bills/Paid';
 import { ToPay } from './components/Bills/ToPay';
-import { Amex } from './components/CreditCards/Amex';
+import { CardBox } from './components/CreditCards/CardBox';
 import { Footer } from './components/Footer'
-import { Visa } from './components/CreditCards/Visa'
 
 export function App() {
+  const cards = [
+    {brand: 'Amex', title: 'Amex', factur: 6732.89},
+    {brand: 'Visa', title: 'Visa Kelita', factur: 123.89},
+    {brand: 'Visa', title: 'Visa Eder', factur: 321.89},
+    {brand: 'NuBank', title: 'NuBank Kelita', factur: 432.89},
+    {brand: 'Maestro', title: 'Maestro Kelita', factur: 345.89},
+  ];
+
   return (
       <>
         <Header />
@@ -23,10 +30,11 @@ export function App() {
             <ToPay />
           </div>
           <div className="creditcards">
-            <Amex />
-            <Visa />
-            <Visa />
-            <Amex />
+            {
+              cards.map((card, index) => {
+                return <CardBox key={index} data={card}/>
+              })
+            }
           </div>
         </main>
         <Footer />
