@@ -5,10 +5,10 @@ export function Menu() {
     <nav>
       <ul className="menu">
 
-        <MenuItem title="Overview" link="/overview" />
+        <MenuItem title="Overview" link="/" />
         <MenuItem title="Dashboard" link="/dashboard" />
         <MenuItem title="Reports" link="/reports" />
-        <MenuItem title="Integration" link="/integration" />
+        <MenuItem title="Add" link="/add" />
         
       </ul>
     </nav>

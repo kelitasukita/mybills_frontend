@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
 export function MenuItem(props) {
-  return <li><a href={props.link}>{props.title}</a></li>;
+  return (<li>
+    <Link to={props.link}>{props.title}</Link>
+  </li>);
 }
