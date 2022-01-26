@@ -6,8 +6,7 @@ import './styles/creditCards.scss'
 import './styles/footer.scss'
 import { Header } from "./components/Header/header";
 import { OverviewPanel } from './components/OverviewPanel/OverviewPanel';
-import { Paid } from './components/Bills/Paid';
-import { ToPay } from './components/Bills/ToPay';
+import { Bills } from './components/Bills/Bills';
 import { CardBox } from './components/CreditCards/CardBox';
 import { Footer } from './components/Footer'
 
@@ -27,8 +26,8 @@ export function App() {
         <main className="container">
           <OverviewPanel />
           <div className="payments">
-            <Paid />
-            <ToPay />
+            <Bills endpoint="/expenses/paid" title="Paid Bills"/>
+            <Bills endpoint="/expenses/unpaid" title="Bills to Pay"/>
             {
               cards.map((card, index) => {
                 return <CardBox key={index} data={card}/>

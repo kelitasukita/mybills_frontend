@@ -2,24 +2,24 @@ import { useEffect, useState } from "react";
 
 export function BillItem(props) {
 
-  const [ status, setStatus ] = useState(props.status);
+  const [ status, setStatus ] = useState(props.bill.paid);
   const [ classe, setClasse ] = useState('minus');
 
   useEffect(() => {
-    if (status == 'minus') {
-      setClasse('unpaid');
-    } else {
+    if (status) {
       setClasse('paid');
+    } else {
+      setClasse('unpaid');
     }
   });
 
   function changeStatus() {
-    if (status == 'minus'){
-      setStatus('check');
-      setClasse('paid');
-    } else {
-      setStatus('minus');
+    if (status){
+      setStatus(false);
       setClasse('unpaid');
+    } else {
+      setStatus(true);
+      setClasse('paid');
     }
   }
 
@@ -31,13 +31,13 @@ export function BillItem(props) {
             <i className="fas fa-circle fa-xs"></i>
           </div>
           <div>
-            <p>{props.dados.title}</p>
-            <small>{props.dados.date}</small>
+            <p>{props.bill.description}</p>
+            <small>{props.bill.dueDate}</small>
           </div>
         </div>
         <div className="value-bill-icon">
-          <p>{props.dados.price}</p>
-          <i className={`fas fa-${status}-circle`} onClick={changeStatus}></i>
+          <p>{props.bill.value}</p>
+          <i className={`fas fa-${status ? 'check' : 'minus'}-circle`} onClick={changeStatus}></i>
         </div>
       </div>
     </div>
