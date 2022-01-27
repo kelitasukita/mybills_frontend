@@ -13,7 +13,8 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
-    static: path.resolve(__dirname, 'public')
+    static: path.resolve(__dirname, 'public'),
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
