@@ -1,0 +1,51 @@
+.form-add-bill{
+  margin: 20px 0;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px; 
+  color: #555; 
+
+  form div {
+    padding: 5px 0;
+    label{
+      display: block;
+      padding: 3px 0;
+    }
+
+    button, input {
+      padding: 10px;
+      border: 1px solid #555;
+      border-radius: 4px;
+      box-shadow: none;
+    }
+
+    input[type]:not([type="checkbox"]) {
+      width: 100%;
+    }
+    
+    input[type]:not([type="checkbox"]).small-input {
+      width: 80px;
+    }
+
+    
+    
+  }
+
+  div.actions {
+    display: flex;
+    justify-content: right;
+
+    .btn-add {
+      cursor: pointer;
+      color: #fff;
+      background-color: #1bd273;
+      width: 120px;
+    }
+
+    .btn-add:hover {
+      background-color: #19c76d;
+      font-weight: bold;
+    }
+  }
+
+}
