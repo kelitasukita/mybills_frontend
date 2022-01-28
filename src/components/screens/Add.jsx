@@ -65,8 +65,8 @@ export function Add() {
             <input 
               type="checkbox" 
               name="paid" 
-              value={paid}
-              onChange={event => setPaid(event.target.value)} 
+              checked={paid}
+              onChange={event => setPaid(event.target.checked)} 
             /> Already Paid </label>
         </div>
         <div>
@@ -83,15 +83,15 @@ export function Add() {
             <input
              type="checkbox" 
              name="automaticDebit" 
-             value={automaticDebit}
-             onChange={event => setAutomaticDebit(event.target.value)} 
+             checked={automaticDebit}
+             onChange={event => setAutomaticDebit(event.target.checked)} 
             /> Automatic Debit</label>
           <label>
             <input 
               type="checkbox" 
               name="recurrent" 
-              value={recurrent}
-              onChange={event => setRecurrent(event.target.value)} 
+              checked={recurrent}
+              onChange={event => setRecurrent(event.target.checked)} 
             /> Recurrent</label>
         </div>
         <div>
