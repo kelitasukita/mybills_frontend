@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export function BillItem(props) {
@@ -14,13 +15,13 @@ export function BillItem(props) {
   });
 
   function changeStatus() {
-    if (status){
-      setStatus(false);
-      setClasse('unpaid');
-    } else {
-      setStatus(true);
-      setClasse('paid');
-    }
+    axios.patch(`http://localhost:3333/expenses/${props.bill.id}/toggle`)
+      .then((response) => {
+        location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   return (
