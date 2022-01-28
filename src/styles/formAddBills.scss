@@ -26,9 +26,6 @@
     input[type]:not([type="checkbox"]).small-input {
       width: 80px;
     }
-
-    
-    
   }
 
   div.actions {
@@ -39,7 +36,7 @@
       cursor: pointer;
       color: #fff;
       background-color: #1bd273;
-      width: 120px;
+      width: 120px !important;
     }
 
     .btn-add:hover {
