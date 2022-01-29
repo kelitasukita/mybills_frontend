@@ -24,6 +24,16 @@ export function BillItem(props) {
       });
   }
 
+  function deleteBill() {
+    axios.delete(`http://localhost:3333/expenses/${props.bill.id}`)
+      .then((response) => {
+        location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <div className="bill">
       <div className="description">
@@ -37,8 +47,8 @@ export function BillItem(props) {
           </div>
         </div>
         <div className="value-bill-icon">
-          <p>{props.bill.value}</p>
-          <i className={`fas fa-${status ? 'check' : 'minus'}-circle`} onClick={changeStatus}></i>
+          <p> <span onClick={deleteBill} className="pointer">&#128465;</span> {props.bill.value}</p>
+          <i className={`fas fa-${status ? 'check' : 'minus'}-circle pointer`} onClick={changeStatus}></i>
         </div>
       </div>
     </div>
