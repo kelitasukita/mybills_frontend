@@ -1,16 +1,24 @@
 import axios from "axios";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function Add() {
-  const [description, setDescription] = useState('');
-  const [value, setValue] = useState(0);
-  const [paid, setPaid] = useState(false);
-  const [dueDate, setDueDate] = useState('');
-  const [automaticDebit, setAutomaticDebit] = useState(false);
-  const [recurrent, setRecurrent] = useState(false);
-  const [currentInstallment, setCurrentInstallment] = useState(0);
-  const [installments, setInstallments] = useState(0);
-  const [obs, setObs] = useState('');
+
+  const navigate = useNavigate();
+
+  const { state } = useLocation();
+
+  console.log("teste: " , state);
+
+  const [description, setDescription] = useState(state?.description ?? '');
+  const [value, setValue] = useState(state?.value ?? 0);
+  const [paid, setPaid] = useState(state?.paid ?? false);
+  const [dueDate, setDueDate] = useState(state?.dueDate ?? '');
+  const [automaticDebit, setAutomaticDebit] = useState(state?.automaticDebit ?? false);
+  const [recurrent, setRecurrent] = useState(state?.recurrent ?? false);
+  const [currentInstallment, setCurrentInstallment] = useState(state?.currentInstallment ?? 0);
+  const [installments, setInstallments] = useState(state?.installments ?? 0);
+  const [obs, setObs] = useState(state?.obs ?? '');
 
 
   function handleCreateNewBill(event) {
@@ -28,9 +36,18 @@ export function Add() {
       obs,
     };
 
-    axios.post('http://localhost:3333/expenses', data)
+    let api;
+
+    if (state?.id) {
+      api = axios.put(`http://localhost:3333/expenses/${state.id}`, data);
+    } else {
+      api = axios.post('http://localhost:3333/expenses', data);
+    }
+
+    api
       .then((response) => {
         console.log(response);
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);

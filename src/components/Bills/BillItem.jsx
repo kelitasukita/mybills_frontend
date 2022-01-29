@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function BillItem(props) {
+
+  const navigate = useNavigate();
 
   const [ status, setStatus ] = useState(props.bill.paid);
   const [ classe, setClasse ] = useState('minus');
@@ -34,6 +37,11 @@ export function BillItem(props) {
       });
   }
 
+  function editBill() {
+    navigate('/add', { state: props.bill })
+
+  }
+
   return (
     <div className="bill">
       <div className="description">
@@ -47,7 +55,11 @@ export function BillItem(props) {
           </div>
         </div>
         <div className="value-bill-icon">
-          <p> <span onClick={deleteBill} className="pointer">&#128465;</span> {props.bill.value}</p>
+          <p> 
+            <span onClick={editBill} className="pointer">&#9999;&#65039;</span> 
+            <span onClick={deleteBill} className="pointer">&#128465;</span> 
+            {props.bill.value}
+          </p>
           <i className={`fas fa-${status ? 'check' : 'minus'}-circle pointer`} onClick={changeStatus}></i>
         </div>
       </div>
