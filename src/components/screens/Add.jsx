@@ -55,6 +55,45 @@ export function Add() {
   }
 
   return (
+    <>
+    <div className="form-add-bill">
+      <form onSubmit={handleCreateNewBill}>
+        <h3>Add Earnings</h3>
+        <div>
+          <label>Description</label>
+          <input 
+            type="text" 
+            name="description" 
+            value={description} 
+            onChange={event => setDescription(event.target.value)} 
+            placeholder="CustomerGauge.."
+          />
+        </div>
+        <div>
+          <label>Value</label>
+          <input 
+            type="number" 
+            name="value" 
+            value={value} 
+            onChange={event => setValue(event.target.value)} 
+            min="0.00" 
+            step="0.01"
+          />
+        </div>
+        <div>
+          <label>Payment Date</label>
+          <input 
+            type="date" 
+            name="dueDate" 
+            value={dueDate}
+            onChange={event => setDueDate(event.target.value)} 
+          />
+        </div>
+        <div className="actions">
+          <input type="submit" value="Add" className="btn-add"/>
+        </div>
+      </form>
+    </div>
     <div className="form-add-bill">
       <form onSubmit={handleCreateNewBill}>
         <h3>Add Bill</h3>
@@ -145,5 +184,6 @@ export function Add() {
         </div>
       </form>
     </div>
+    </>
   );
 }
