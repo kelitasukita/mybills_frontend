@@ -8,8 +8,6 @@ export function Add() {
 
   const { state } = useLocation();
 
-  console.log("teste: " , state);
-
   const [description, setDescription] = useState(state?.description ?? '');
   const [value, setValue] = useState(state?.value ?? 0);
   const [paid, setPaid] = useState(state?.paid ?? false);
@@ -19,6 +17,10 @@ export function Add() {
   const [currentInstallment, setCurrentInstallment] = useState(state?.currentInstallment ?? 0);
   const [installments, setInstallments] = useState(state?.installments ?? 0);
   const [obs, setObs] = useState(state?.obs ?? '');
+
+  const [descriptionEarning, setDescriptionEarning] = useState(state?.descriptionEarning ?? '');
+  const [valueEarning, setValueEarning] = useState(state?.valueEarning ?? 0)
+  const [paymentDay, setPaymentDay] = useState(state?.paymentDay ?? '')
 
 
   function handleCreateNewBill(event) {
@@ -54,18 +56,32 @@ export function Add() {
       });
   }
 
+  function handleCreateNewEarning(event) {
+    event.preventDefault();
+
+    const data = {
+      description: descriptionEarning,
+      value: valueEarning,
+      receiptDate: paymentDay,
+    };
+
+    const earning = axios.post('http://localhost:3333/earnings', data);
+  }
+
   return (
     <>
+    {/* ======================= ADD EARNINGS ======================= */}
+
     <div className="form-add-bill">
-      <form onSubmit={handleCreateNewBill}>
+      <form onSubmit={handleCreateNewEarning}>
         <h3>Add Earnings</h3>
         <div>
           <label>Description</label>
           <input 
             type="text" 
             name="description" 
-            value={description} 
-            onChange={event => setDescription(event.target.value)} 
+            value={descriptionEarning} 
+            onChange={event => setDescriptionEarning(event.target.value)} 
             placeholder="CustomerGauge.."
           />
         </div>
@@ -74,8 +90,8 @@ export function Add() {
           <input 
             type="number" 
             name="value" 
-            value={value} 
-            onChange={event => setValue(event.target.value)} 
+            value={valueEarning} 
+            onChange={event => setValueEarning(event.target.value)} 
             min="0.00" 
             step="0.01"
           />
@@ -84,9 +100,9 @@ export function Add() {
           <label>Payment Date</label>
           <input 
             type="date" 
-            name="dueDate" 
-            value={dueDate}
-            onChange={event => setDueDate(event.target.value)} 
+            name="receiptDate" 
+            value={paymentDay}
+            onChange={event => setPaymentDay(event.target.value)} 
           />
         </div>
         <div className="actions">
@@ -94,6 +110,10 @@ export function Add() {
         </div>
       </form>
     </div>
+
+
+    {/* ======================= ADD BILLS ======================= */}
+
     <div className="form-add-bill">
       <form onSubmit={handleCreateNewBill}>
         <h3>Add Bill</h3>
