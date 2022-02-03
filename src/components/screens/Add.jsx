@@ -177,7 +177,7 @@ export function Add() {
             name="currentInstallment" 
             value={currentInstallment} 
             className="small-input"
-            onChange={event => setCurrentInstallment(event.target.value)} 
+            onChange={event => setCurrentInstallment(+event.target.value)} 
           />
           <span> of </span>
           <input 
@@ -185,7 +185,7 @@ export function Add() {
             name="installments" 
             value={installments} 
             className="small-input"
-            onChange={event => setInstallments(event.target.value)} 
+            onChange={event => setInstallments(+event.target.value)} 
           />
             
         </div>

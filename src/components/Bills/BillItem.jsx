@@ -42,6 +42,7 @@ export function BillItem(props) {
 
   }
 
+
   return (
     <div className="bill">
       <div className="description">
@@ -50,7 +51,9 @@ export function BillItem(props) {
             <i className="fas fa-circle fa-xs"></i>
           </div>
           <div>
-            <p>{props.bill.description}</p>
+            <p>{props.bill.description}
+               {props.bill.installments > 0 ? ` - ${props.bill.currentInstallment}/${props.bill.installments}`: ''}
+            </p>
             <small>{props.bill.dueDate}</small>
           </div>
         </div>
