@@ -5,11 +5,12 @@ export function Bills(props) {
 
   const [list, setList] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3333' + props.endpoint)
+// O fetch é uma forma de usar um GET nativo. Para um PUT e POST preciso do AXIOS. 
+  useEffect(() => { 
+    fetch('http://localhost:3333' + props.endpoint) 
       .then(response => response.json())
       .then(apiResponse => setList(apiResponse.data))
-  }, []);
+  }, [props.endpoint]);
 
   return (
       <section className="pay-card-boxes">

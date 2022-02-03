@@ -57,7 +57,7 @@ export function Add() {
   }
 
   function handleCreateNewEarning(event) {
-    event.preventDefault();
+    event.preventDefault(); // Serve para evitar o reload da tela no submit do formulário
 
     const data = {
       description: descriptionEarning,
