@@ -7,7 +7,7 @@ export function OverviewPanel(props) {
   const [expenses, setExpenses] = useState();
   const [balance, setBalance] = useState();
   
-  // useEffect(funcao, arrayDeCoisasQuePodemMudarParaExecutarAFuncaoAnterior)
+  // useEffect(funcao(1º parâmetro), arrayDeCoisasQuePodemMudarParaExecutarAFuncaoAnterior(2º parâmetro))
 
   useEffect(() => {
     fetch(`http://localhost:3333/overview?year=${props.year}&month=${props.month}`)
