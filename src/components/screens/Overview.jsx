@@ -12,7 +12,7 @@ export function Overview() {
     const today = new Date();
 
     if (today.getDate() < 24) {
-      setMonth(today.getMonth() - 1);
+      setMonth(today.getMonth());
 
       if(month == 0) {
         setMonth(12);
