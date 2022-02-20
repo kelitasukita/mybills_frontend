@@ -36,6 +36,11 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: #ebebeb dotted 1px;
+  font-weight: 400;
+
+  small {
+    font-weight: 300;
+  }
 }
 
 .description-left {
