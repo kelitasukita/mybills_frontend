@@ -19,7 +19,7 @@ export function Overview() {
         setYear(today.getFullYear() - 1);
       }
     }
-  }, []);
+  });
 
   const cards = [
     {brand: 'Amex', title: 'Amex', factur: 6732.89},
