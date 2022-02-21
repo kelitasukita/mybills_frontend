@@ -7,12 +7,22 @@
   section {
     flex: 1 1 390px;
 
-    h3 {
-      color: #555;
-      font-size: 1rem;
-      font-weight: 400;
-      padding: 10px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: #555;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 10px;
+      }
+
+      .total {
+        color: #1bd273;
+      }
     }
+
 
     .icon-bill {
       padding: 10px;
