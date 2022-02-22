@@ -18,7 +18,7 @@ export function BillItem(props) {
   });
 
   function changeStatus() {
-    axios.patch(`http://localhost:3333/expenses/${props.bill.id}/toggle`)
+    axios.patch(`${process.env.API_HOST}/expenses/${props.bill.id}/toggle`)
       .then((response) => {
         location.reload();
       })
@@ -28,7 +28,7 @@ export function BillItem(props) {
   }
 
   function deleteBill() {
-    axios.delete(`http://localhost:3333/expenses/${props.bill.id}`)
+    axios.delete(`${process.env.API_HOST}/expenses/${props.bill.id}`)
       .then((response) => {
         location.reload();
       })

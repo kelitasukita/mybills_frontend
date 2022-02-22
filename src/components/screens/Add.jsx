@@ -41,9 +41,9 @@ export function Add() {
     let api;
 
     if (state?.id) {
-      api = axios.put(`http://localhost:3333/expenses/${state.id}`, data);
+      api = axios.put(`${process.env.API_HOST}/expenses/${state.id}`, data);
     } else {
-      api = axios.post('http://localhost:3333/expenses', data);
+      api = axios.post(`${process.env.API_HOST}/expenses`, data);
     }
 
     api
@@ -65,7 +65,7 @@ export function Add() {
       receiptDate: paymentDay,
     };
 
-    const earning = axios.post('http://localhost:3333/earnings', data);
+    const earning = axios.post(`${process.env.API_HOST}/earnings`, data);
   }
 
   return (
