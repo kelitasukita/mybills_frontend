@@ -11,7 +11,7 @@ export function Overview() {
   useEffect(() => {
     const today = new Date();
 
-    if (today.getDate() < 24) {
+    if (today.getDate() < 23) {
       setMonth(today.getMonth());
 
       if(month == 0) {
