@@ -59,11 +59,13 @@ export function BillItem(props) {
         </div>
         <div className="value-bill-icon">
           <p> 
-            <span onClick={editBill} className="pointer">&#9999;&#65039;</span> 
-            <span onClick={deleteBill} className="pointer">&#128465;</span> 
-            {props.bill.value}
+            €{props.bill.value}&nbsp; 
+            <button onClick={editBill} className="pointer"><i className="emoji-icon">&#9999;&#65039;</i></button> 
+            <button onClick={deleteBill} className="pointer"><i className="emoji-icon">&#128465;</i></button> 
           </p>
-          <i className={`fas fa-${status ? 'check' : 'minus'}-circle pointer`} onClick={changeStatus}></i>
+          <button>
+            <i className={`fas fa-${status ? 'check' : 'minus'}-circle pointer`} onClick={changeStatus}></i>
+          </button>
         </div>
       </div>
     </div>

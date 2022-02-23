@@ -5,7 +5,7 @@
   gap: 15px;
 
   section {
-    flex: 1 1 390px;
+    flex: 1 1 690px;
 
     .title {
       display: flex;
@@ -35,7 +35,7 @@
     }
 
     .container-bills, .container-creditcard {
-      height: 185px;
+      height: 370px;
       overflow-y: auto;
     }
   }
@@ -57,13 +57,29 @@
   display: flex;
 }
 
- .value-bill-icon {
+.value-bill-icon {
    display: flex;
    align-items: center;
+
+   button {
+     background-color: #fff;
+     border: #ebebeb 1px solid;
+     border-radius: 6px;
+     padding: 2px;
+     margin: 0 1px;
+     i {
+       font-style: normal;
+       text-align: center;
+     } 
+   }
+
+  button:hover {
+    background-color: #ebebeb;
   }
+}
 
 .value-bill-icon i{
-  padding: 10px;
+  padding: 2.6px;
   /* color: greenyellow; */
 }
 
