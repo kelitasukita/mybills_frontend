@@ -59,7 +59,7 @@ export function BillItem(props) {
         </div>
         <div className="value-bill-icon">
           <p> 
-            €{props.bill.value}&nbsp; 
+            <span className={props.bill.overdue ? 'overdue' : ''}>€{props.bill.value} </span>
             <button onClick={editBill} className="pointer"><i className="emoji-icon">&#9999;&#65039;</i></button> 
             <button onClick={deleteBill} className="pointer"><i className="emoji-icon">&#128465;</i></button> 
           </p>

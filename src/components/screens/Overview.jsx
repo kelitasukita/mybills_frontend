@@ -57,8 +57,8 @@ export function Overview() {
       <OverviewPanel year={year} month={month}/>
       <div className="payments">
             
-        <Bills endpoint={`/expenses/paid?year=${year}&month=${month}`} title="Paid Bills"/>
         <Bills endpoint={`/expenses/unpaid?year=${year}&month=${month}`} title="Bills to Pay"/>
+        <Bills endpoint={`/expenses/paid?year=${year}&month=${month}`} title="Paid Bills"/>
         {
           cards.map((card, index) => {
             return <CardBox key={index} data={card}/>
