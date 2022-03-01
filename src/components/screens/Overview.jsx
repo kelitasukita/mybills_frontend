@@ -9,6 +9,7 @@ export function Overview() {
   const [month, setMonth] = useState(new Date().getMonth() + 1);
 
   useEffect(() => {
+    
     const today = new Date();
 
     if (today.getDate() < 23) {
@@ -54,7 +55,10 @@ export function Overview() {
           max="2100" 
         />
       </div>
+     
+
       <OverviewPanel year={year} month={month}/>
+      
       <div className="payments">
             
         <Bills endpoint={`/expenses/unpaid?year=${year}&month=${month}`} title="Bills to Pay"/>
@@ -64,6 +68,7 @@ export function Overview() {
             return <CardBox key={index} data={card}/>
           })
         }
+       
       </div>
     </>
   );

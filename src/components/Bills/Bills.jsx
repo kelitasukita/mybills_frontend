@@ -4,8 +4,9 @@ import { BillItem } from "./BillItem";
 export function Bills(props) {
 
   const [list, setList] = useState([]);
-  const [total, setTotal] = useState([]);
-  const [totalOverdue, setTotalOverdue] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [totalMonth, setTotalMonth] = useState(0);
+  const [totalOverdue, setTotalOverdue] = useState(0);
 
 // O fetch é uma forma de usar um GET nativo. Para um PUT e POST preciso do AXIOS. 
   useEffect(() => { 
@@ -14,6 +15,9 @@ export function Bills(props) {
       .then(apiResponse => { 
         setList(apiResponse.data);
         setTotal(apiResponse.total);
+        if (apiResponse.totalMonth) {
+          setTotalMonth(apiResponse.totalMonth);
+        }
         setTotalOverdue(apiResponse.totalOverdue);
       })
   }, [props.endpoint]);
@@ -24,7 +28,7 @@ export function Bills(props) {
           <h3>{props.title}</h3>
           <h3 className="total">{totalOverdue ? (
             <span className="overdue">€{Number(totalOverdue).toFixed(2)} </span>
-          ): ''}€{total}</h3>
+          ): ''}€{totalMonth ? totalMonth : total}</h3>
         </div>
         <div className="container-bills">
           {
