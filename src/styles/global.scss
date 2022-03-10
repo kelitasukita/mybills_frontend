@@ -8,7 +8,14 @@
 
 body {
   background: #ebebeb;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+button,
+input {
+  border: 0;
+  background: none;
 }
 
 /* MAIN ========================================= */
