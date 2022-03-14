@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { MoneyDollarCircle, UserCircle } from "../components/Icons";
 
 export const TopHeader = styled.header`
 
@@ -6,18 +7,18 @@ export const TopHeader = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  background: #1bd273;
+  background: var(--green);
   padding: 10px;
   text-align: left;
-  color: #ebebeb;
+  color: var(--gray);
 
   #logo {
-    color: #ebebeb;
+    color: var(--gray);
     font-weight: 700;
     justify-content: left;
   }
 
-  .menu {
+  /* .menu {
     display: flex;
 
     li {
@@ -30,5 +31,14 @@ export const TopHeader = styled.header`
         color: #ebebeb;
       }
     }
-  }
+  } */
 `;
+
+const iconCSS = css`
+  width: 35px;
+  height: 35px;
+  margin-top: -5px;
+`;
+export const LogoMoney = styled(MoneyDollarCircle)`${iconCSS}`;
+
+export const UserIcon = styled(UserCircle)`${iconCSS}`;
