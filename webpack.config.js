@@ -1,40 +1,40 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
-  devtool: 'eval-source-map',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  devtool: 'inline-source-map',
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   devServer: {
     static: path.resolve(__dirname, 'public'),
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
     new Dotenv(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
-    })
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: 'ts-loader',
       },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      }
+      // {
+      //   test: /\.ts$/,
+      //   exclude: /node_modules/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader'],
+      // },
     ],
-  }
+  },
 };
