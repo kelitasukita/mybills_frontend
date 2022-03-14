@@ -23,18 +23,18 @@
       }
     }
 
-
     .icon-bill {
       padding: 10px;
       align-items: center;
       color: #1bd273;
     }
-    
-    .unpaid  .icon-bill  {
-      color: red;
+
+    .unpaid .icon-bill {
+      color: #c51111;
     }
 
-    .container-bills, .container-creditcard {
+    .container-bills,
+    .container-creditcard {
       height: 370px;
       overflow-y: auto;
     }
@@ -58,27 +58,27 @@
 }
 
 .value-bill-icon {
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 
-   button {
-     background-color: #fff;
-     border: #ebebeb 1px solid;
-     border-radius: 6px;
-     padding: 2px;
-     margin: 0 1px;
-     i {
-       font-style: normal;
-       text-align: center;
-     } 
-   }
+  button {
+    background-color: #fff;
+    border: #ebebeb 1px solid;
+    border-radius: 6px;
+    padding: 2px;
+    margin: 0 1px;
+    i {
+      font-style: normal;
+      text-align: center;
+    }
+  }
 
   button:hover {
     background-color: #ebebeb;
   }
 }
 
-.value-bill-icon i{
+.value-bill-icon i {
   padding: 2.6px;
   /* color: greenyellow; */
 }
@@ -86,9 +86,8 @@
 .pay-card-boxes {
   border-radius: 4px;
   background: #fff;
-  padding: 10px; 
+  padding: 10px;
   font-size: 0.8rem;
   font-weight: 100;
-  color: #555; 
+  color: #555;
 }
-

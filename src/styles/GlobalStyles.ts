@@ -27,7 +27,7 @@ input {
 }
 
 html {
-  background: #ebebeb;
+  background: var(--gray);
 }
 
 /* MAIN ========================================= */
@@ -41,7 +41,17 @@ html {
 }
 
 .overdue {
-  color: rgb(238, 34, 34);
+  color: var(--red);
+}
+
+:root {
+  --gray: #ebebeb;
+  --green: #1bd273;
+  --blue: #57d3ff;
+  --text: #555;
+  --red: #c51111;
+  --background: #ffffff;
+  --btnhover: #00ff7b;
 }
 `;
 
