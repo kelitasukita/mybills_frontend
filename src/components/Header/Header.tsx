@@ -1,8 +1,8 @@
 import React from "react";
 
-// import Menu from "./Menu";
+import Menu from "../Menu";
 
-import { TopHeader, LogoMoney, UserIcon } from "../../styles/Header";
+import { TopHeader, LogoMoney, UserIcon } from "./HeaderStyles";
 
 const Header: React.FC = () => {
   return ( 
@@ -10,7 +10,7 @@ const Header: React.FC = () => {
       <div>
         <h1 id="logo">my.bill<LogoMoney /></h1>
       </div>
-      {/* <Menu /> */}
+      <Menu />
       <div>
         <h1>Kelita <UserIcon /></h1>
       </div>

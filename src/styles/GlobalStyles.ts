@@ -32,7 +32,7 @@ html {
 
 /* MAIN ========================================= */
 .container {
-  width: calc(min(90vw, 1400px));
+  width: calc(min(100vw, 1400px));
   margin: 0 auto;
 }
 
