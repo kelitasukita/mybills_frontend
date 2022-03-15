@@ -9,14 +9,14 @@ export const TopHeader = styled.header`
 
   background: var(--green);
   padding: 10px;
-  text-align: left;
+  /* text-align: left; */
   color: var(--gray);
 
-  #logo {
+  /* #logo {
     color: var(--gray);
     font-weight: 700;
     justify-content: left;
-  }
+  } */
 
   /* .menu {
     display: flex;
