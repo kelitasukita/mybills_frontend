@@ -12,9 +12,8 @@ const Header: React.FC = () => {
       </div>
       <Menu />
       <div>
-        <h1>Kelita <UserIcon /></h1>
+        <h1><span className="username">Kelita</span> <UserIcon /></h1>
       </div>
-
     </TopHeader>
   );
 }

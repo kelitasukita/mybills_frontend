@@ -11,6 +11,12 @@ export const TopHeader = styled.header`
   padding: 10px;
   color: var(--gray);
 
+  .username {
+    @media (max-width: 780px) {
+      display: none;
+    }
+  }
+
 `;
 
 const iconCSS = css`
@@ -18,6 +24,7 @@ const iconCSS = css`
   height: 35px;
   margin-top: -5px;
 `;
+
 export const LogoMoney = styled(MoneyDollarCircle)`${iconCSS}`;
 
 export const UserIcon = styled(UserCircle)`${iconCSS}`;

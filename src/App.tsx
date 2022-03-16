@@ -12,6 +12,7 @@ import GlobalStyles from './styles/GlobalStyles';
 // import './styles/dateFilter.scss';
 
 import Header  from './components/Header/Header';
+import Main from './components/Main/Main';
 // import { Footer } from './components/Footer';
 // import { Overview } from './components/screens/Overview';
 // import { Add } from './components/screens/Add';
@@ -22,7 +23,8 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Main />
+
         {/* <main className="container">
           <Routes>
             <Route path="/" element={<Overview />} />
