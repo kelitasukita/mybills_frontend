@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, MenuTitle } from "./menuStyles";
+import { Container, MenuTitle } from './MenuStyles';
 
 const Menu: React.FC = () => {
   return (
