@@ -23,9 +23,9 @@ export const BottomMenu = styled.div`
   display: flex;
   justify-content: space-between;
 
-  padding: 18px min(46px, max(10vh, 10px));
+  padding: 12px min(46px, max(10vh, 10px));
 
-  @media (min-width: 500px) {
+  @media (min-width: 601px) {
     display: none;
   }
 `;
