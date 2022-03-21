@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, MenuTitle } from './MenuStyles';
 
@@ -6,11 +7,11 @@ const Menu: React.FC = () => {
   return (
     <Container>
       <MenuTitle>
-        <span>Overview</span>
+        <Link to="/"><span>Overview</span></Link>
       </MenuTitle>
 
       <MenuTitle>
-        <span>Dasboard</span>
+        <Link to="/dashboard"><span>Dashboard</span></Link>
       </MenuTitle>
 
       <MenuTitle>

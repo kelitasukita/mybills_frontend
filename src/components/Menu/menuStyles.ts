@@ -18,9 +18,14 @@ export const MenuTitle = styled.div`
   font-size: 19px;
   color: var(--gray);
 
+  a {
+    text-decoration: none;
+    color: var(--gray);
+  }
+
   cursor: pointer;
 
-  &:hover {
+  a:hover {
     color: var(--text);
   }
 
